@@ -1,15 +1,101 @@
-# Proyecto de Cómputo Evolutivo
+# GreenGP - Programación Genética para Aproximación de Funciones
+
+## Descripción
+Sistema de programación genética que evoluciona expresiones matemáticas para aproximar funciones. Implementa un algoritmo evolutivo con operadores genéticos adaptables y visualización en tiempo real.
+
+## Requisitos
+```bash
+numpy>=1.19.0
+matplotlib>=3.3.0
+```
+
+## Instalación
+```bash
+# Clonar el repositorio
+git clone https://github.com/yourusername/GreenGP.git
+cd GreenGP
+
+# Crear y activar entorno virtual (opcional pero recomendado)
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+
+# Instalar dependencias
+pip install numpy matplotlib
+```
 
 ## Estructura del Proyecto
-
-- `individuos/` - Contiene la definición de los individuos en la población.
-- `operadores/` - Implementación de métodos de selección, crossover y mutación.
-- `datos/` - Almacena los conjuntos de datos necesarios para el problema.
-- `utils/` - Funciones auxiliares que pueden ser útiles en varias partes del proyecto.
-- `experiments/` - Scripts para ejecutar experimentos y pruebas.
-- `docs/` - Documentación detallada del proyecto.
+```
+GreenGP/
+├── datos/
+│   └── square_root_data.json    # Datos de entrenamiento
+├── individuos/
+│   ├── nodes.py                 # Implementación de nodos
+│   └── individual.py            # Clase Individual
+├── operadores/
+│   └── EvolutionaryAlgorithmClassic.py
+├── utils/
+│   ├── plotting.py              # Visualización
+│   └── comparación_mathteorical.py
+├── experiments/
+│   └── first_evolutionary_problem.py
+└── main.py
+```
 
 ## Uso
-Ejecuta el script principal con: 
 
-\	python main.py
+### Ejecución Básica
+```bash
+python main.py
+```
+
+### Parámetros Configurables
+```python
+population_size = 200    # Tamaño de la población
+generations = 200       # Número de generaciones
+mutation_rate = 0.4     # Tasa de mutación
+crossover_rate = 0.8    # Tasa de cruce
+elite_size = 5          # Cantidad de élites preservados
+```
+
+### Comparación con Función Teórica
+```bash
+python utils/comparación_mathteorical.py
+```
+
+## Características
+- Evolución en tiempo real con visualización gráfica
+- Elitismo para preservar mejores soluciones
+- Operadores genéticos adaptativos
+- Manejo seguro de operaciones matemáticas
+- Múltiples operadores: +, -, *, /, ^, sin, cos, tan, log
+
+## Resultados
+Los resultados se guardan en:
+```
+resultados/graficas/
+├── generacion_0.png
+├── generacion_10.png
+...
+└── resultado_final.png
+```
+
+## Visualización
+- Gráfica en tiempo real de la evolución
+- Comparación entre datos reales y predicciones
+- Visualización de la mejor función encontrada
+- Estructura del árbol de expresiones
+
+## Tips de Uso
+1. Ajusta `population_size` según la complejidad del problema
+2. Modifica `mutation_rate` si la convergencia es muy rápida/lenta
+3. Usa `elite_size` para balancear exploración/explotación
+4. Verifica los resultados en `resultados/graficas/`
+
+## Contribuir
+1. Fork el repositorio
+2. Crea una rama para tu feature
+3. Realiza tus cambios
+4. Envía un pull request
+
+## Licencia
+MIT License
