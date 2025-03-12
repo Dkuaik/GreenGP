@@ -5,14 +5,13 @@ Sistema de programación genética que evoluciona expresiones matemáticas para 
 
 ## Requisitos
 ```bash
-numpy>=1.19.0
-matplotlib>=3.3.0
+requirements.txt
 ```
 
 ## Instalación
 ```bash
 # Clonar el repositorio
-git clone https://github.com/yourusername/GreenGP.git
+git clone https://github.com/Dkuaik/GreenGP.git
 cd GreenGP
 
 # Crear y activar entorno virtual (opcional pero recomendado)
@@ -20,7 +19,7 @@ python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 
 # Instalar dependencias
-pip install numpy matplotlib
+pip install -r requirements.txt
 ```
 
 ## Estructura del Proyecto
@@ -90,12 +89,3 @@ resultados/graficas/
 2. Modifica `mutation_rate` si la convergencia es muy rápida/lenta
 3. Usa `elite_size` para balancear exploración/explotación
 4. Verifica los resultados en `resultados/graficas/`
-
-## Contribuir
-1. Fork el repositorio
-2. Crea una rama para tu feature
-3. Realiza tus cambios
-4. Envía un pull request
-
-## Licencia
-MIT License
