@@ -23,7 +23,7 @@ if __name__ == "__main__":
     os.makedirs('resultados/graficas', exist_ok=True)
     
     # Leer datos de entrada
-    with open('datos/square_root_data.json', 'r') as file:
+    with open('datos/datos_accion_simulada.json', 'r') as file:
         data = json.load(file)
         x_values = np.array(data['x_values'])
         y_values = np.array(data['y_values'])
